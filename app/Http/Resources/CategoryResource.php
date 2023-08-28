@@ -20,7 +20,6 @@ class CategoryResource extends JsonResource
             'description' => $this->description,            
             'slug' => $this->url,
             'date_created' => Carbon::make($this->created_at)->format('d/m/Y')
-            
         ];
     }
 }
