@@ -59,22 +59,34 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  string  $url
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreUpdateCategoryRequest $request, $url)
     {
-        //
+        $category = $this->repository->where('url', $url)->firstOrFail();
+        
+        $category->update($request->all());
+        
+        return response()->json(['message' => 'success']);
+
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  string  $url
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($url)
     {
-        //
+        $category = $this->repository->where('url', $url)->firstOrFail();
+
+        $category->delete();
+
+        return response()->json(['message' => 'success']);
+
+
     }
 }
