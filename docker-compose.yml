@@ -1,5 +1,7 @@
 version: '3.8'
 services:
+
+  # imagem micro 01
   micro_01:
     build:
       args:
@@ -12,3 +14,37 @@ services:
     working_dir: /var/www
     volumes:
       - ./:/var/www
+    networks:
+      - microservices
+
+  #nginx
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/:/etc/nginx/conf.d/
+    networks:
+      - microservices
+
+  # db
+  db_micro_01:
+    image: mysql:5.7.22
+    restart: unless-stopped
+    ports:
+      - ${DB_PORT}:3306
+    volumes:
+      - ./.docker/mysql/dbdata:/var/lib/mysql #Database will be saved in this folder... DON'T FORGET to add it in .gitignore
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - microservices
+
+networks:
+  microservices:
+    driver: bridge
