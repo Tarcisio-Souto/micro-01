@@ -55,7 +55,7 @@ class CompanyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $uuid
+     * @param  string  $uuid
      * @return \Illuminate\Http\Response
      */
     public function show($uuid)
@@ -79,12 +79,17 @@ class CompanyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  string  $uuid
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreUpdateCompanyRequest $request, $uuid)
     {
-        //
+        $company = $this->repository->where('uuid', $uuid)->firstOrFail();
+        $company->update($request->all());
+
+        return new CompanyResource($company);
+
+
     }
 
     /**

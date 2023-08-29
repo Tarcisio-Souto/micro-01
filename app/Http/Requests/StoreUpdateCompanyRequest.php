@@ -23,12 +23,14 @@ class StoreUpdateCompanyRequest extends FormRequest
      */
     public function rules()
     {
+        $uuid = $this->company;
+
         return [
             'category_id' => ['required', 'exists:categories,id'],
             'name' => ['required', 'unique:companies'],
             'phone' => ['required', 'unique:companies'],
             'whatsapp' => ['required', 'unique:companies'],
-            'email' => ['required', 'email', 'unique:companies'],
+            'email' => ['required', 'email', 'unique:companies,uuid,'.$this->company],
             'facebook' => ['required', 'unique:companies'],
             'instagram' => ['required', 'unique:companies'],
             'youtube' => ['required', 'unique:companies'],
