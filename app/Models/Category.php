@@ -11,4 +11,11 @@ class Category extends Model
 
     protected $fillable = ['title', 'url', 'description'];
 
+    public function company() {
+
+        return $this->hasMany(Company::class);
+
+    }
+
+
 }
