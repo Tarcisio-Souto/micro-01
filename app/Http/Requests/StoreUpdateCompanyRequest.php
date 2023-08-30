@@ -27,13 +27,13 @@ class StoreUpdateCompanyRequest extends FormRequest
 
         return [
             'category_id' => ['required', 'exists:categories,id'],
-            'name' => ['required', 'unique:companies'],
-            'phone' => ['required', 'unique:companies'],
-            'whatsapp' => ['required', 'unique:companies'],
+            'name' => ['required', 'unique:companies,uuid,'.$this->company],
+            'phone' => ['required', 'unique:companies,uuid,'.$this->company],
+            'whatsapp' => ['required', 'unique:companies,uuid,'.$this->company],
             'email' => ['required', 'email', 'unique:companies,uuid,'.$this->company],
-            'facebook' => ['required', 'unique:companies'],
-            'instagram' => ['required', 'unique:companies'],
-            'youtube' => ['required', 'unique:companies'],
+            'facebook' => ['required', 'unique:companies,uuid,'.$this->company],
+            'instagram' => ['required', 'unique:companies,uuid,'.$this->company],
+            'youtube' => ['required', 'unique:companies,uuid,'.$this->company],
         ];
     }
 }
