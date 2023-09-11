@@ -23,7 +23,7 @@ Este microsserviço foi elaborado com o intuito de ser integrado com outros micr
 <b>Para customizar/desenvolver a aplicação é necessário ter os recursos abaixo após a clonagem:</b>
 <br><br>
 <ul>
-    <li><b>PHP 8.0</b>b></li>
+    <li><b>PHP 8.0</b></li>
     <li><b>Laravel 8</b></li>
     <li>
         <b>Editor de códigos (Visual Studio Code ou outro como o Android Studio)</b>
