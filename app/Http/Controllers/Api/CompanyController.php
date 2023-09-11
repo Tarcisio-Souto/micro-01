@@ -149,22 +149,32 @@ class CompanyController extends Controller
      * @param  string  $uuid
      * @return \Illuminate\Http\Response
      */
+
+
+
+    /**
+     * @OA\Get(
+     *      path="/companies/{uuid}",
+     *      tags={"Companies"},
+     *      operationId="getCompany",
+     *      summary="Get company",
+     *      @OA\Parameter(
+     *          name="uuid",
+     *          in="path",
+     *          required=true
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Success"
+     *      ),
+     * ),
+     */
     public function show($uuid)
     {
         $company = $this->repository->where('uuid', $uuid)->firstOrFail();
         return new CompanyResource($company);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.

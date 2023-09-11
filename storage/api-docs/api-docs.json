@@ -129,6 +129,25 @@
             }
         },
         "/companies/{uuid}": {
+            "get": {
+                "tags": [
+                    "Companies"
+                ],
+                "summary": "Get company",
+                "operationId": "getCompany",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            },
             "put": {
                 "tags": [
                     "Companies"

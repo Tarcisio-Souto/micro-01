@@ -13,7 +13,7 @@ use Illuminate\Routing\Controller as BaseController;
      *      title="API Micro 01",
      *      description="API Micro 01",
      *      @OA\Contact(
-     *          email="admin@admin.com"
+     *          email="tss.labsi@gmail.com"
      *      ),
      *      @OA\License(
      *          name="Apache 2.0",
