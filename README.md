@@ -43,7 +43,7 @@ Este microsserviço foi elaborado com o intuito de ser integrado com outros micr
 
 <p><br>
 
-><h3 align="center">Capturas do Swagger</h3>
+><h3 align="center">Algumas Capturas do Swagger</h3>
 <br>
 
 ><b>/documentation</b><br>
