@@ -48,7 +48,7 @@ Este microsserviço foi elaborado com o intuito de ser integrado com outros micr
 
 ><b>/documentation</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/documentation.PNG)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/documentation.png)
 
 <br><br>
 
