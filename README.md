@@ -54,19 +54,19 @@ Este microsserviço foi elaborado com o intuito de ser integrado com outros micr
 
 ><b>/companies</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-list.PNG)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-list.png)
 
 <br><br>
 
 ><b>/companies-post</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-post.PNG)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-post.png)
 
 <br><br>
 
 ><b>/companies-delete</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-delete.PNG)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-delete.png)
 
 <br><br><br>
 
