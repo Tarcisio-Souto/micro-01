@@ -173,11 +173,77 @@ class CompanyController extends Controller
      * @param  string  $uuid
      * @return \Illuminate\Http\Response
      */
+
+
+    /**
+     * @OA\Put(
+     *      path="/companies/{uuid}",
+     *      operationId="updateCompany",
+     *      tags={"Companies"},
+     *      summary="Update company",
+     *      description="Update company data",
+     *      @OA\Parameter(name="uuid", description="uuid", required=true, in="path", @OA\Schema(type="string")),
+     *      @OA\RequestBody(
+     *         @OA\JsonContent(
+     *            @OA\Schema(
+     *               type="object",
+     *               required={"category_id", "name", "phone", "whatsapp", "email", "facebook", "instagram", "youtube"},
+     *               @OA\Property(property="category_id", type="integer"),
+     *               @OA\Property(property="name", type="string"),
+     *               @OA\Property(property="phone", type="string"),
+     *               @OA\Property(property="whatsapp", type="string"),
+     *               @OA\Property(property="email", type="string"),
+     *               @OA\Property(property="facebook", type="string"),
+     *               @OA\Property(property="instagram", type="string"),
+     *               @OA\Property(property="youtube", type="string"),
+     *            ),
+     *         ),
+     *         @OA\MediaType(
+     *            mediaType="application/x-www-form-urlencoded",
+     *            @OA\Schema(
+     *               type="object",
+     *               required={"category_id", "name", "phone", "whatsapp", "email", "facebook", "instagram", "youtube"},
+     *               @OA\Property(property="category_id", type="integer"),
+     *               @OA\Property(property="name", type="string"),
+     *               @OA\Property(property="phone", type="string"),
+     *               @OA\Property(property="whatsapp", type="string"),
+     *               @OA\Property(property="email", type="string"),
+     *               @OA\Property(property="facebook", type="string"),
+     *               @OA\Property(property="instagram", type="string"),
+     *               @OA\Property(property="youtube", type="string"),
+     *            ),
+     *         ),
+     *      ),
+     *      @OA\Response(
+     *          response=201,
+     *          description="Successful operation",
+     *       ),
+     *      @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="Validation error"
+     *      ),
+     *      @OA\Response(
+     *          response=500,
+     *          description="Internal error"
+     *      ),
+     * )
+     */
     public function update(StoreUpdateCompanyRequest $request, $uuid)
     {
         $company = $this->repository->where('uuid', $uuid)->firstOrFail();
         $company->update($request->all());
-
         return new CompanyResource($company);
     }
 
