@@ -80,29 +80,36 @@ class CompanyController extends Controller
      *      tags={"Companies"},
      *      summary="Store new company",
      *      description="Returns company data",
-     *      @OA\Parameter(name="category_id", description="category_id", required=false,
-     *        @OA\Schema(type="integer")
-     *      ),
-     *      @OA\Parameter(name="name", description="name", required=false,
-     *        @OA\Schema(type="string")
-     *      ),
-     *      *      @OA\Parameter(name="phone", description="phone", required=false,
-     *        @OA\Schema(type="string")
-     *      ),
-     *      *      @OA\Parameter(name="whatsapp", description="whatsapp", required=false,
-     *        @OA\Schema(type="string")
-     *      ),
-     *      *      @OA\Parameter(name="email", description="email", required=false,
-     *        @OA\Schema(type="string")
-     *      ),
-     *      *      @OA\Parameter(name="facebook", description="facebook", required=false,
-     *        @OA\Schema(type="string")
-     *      ),
-     *      *      @OA\Parameter(name="instagram", description="instagram", required=false,
-     *        @OA\Schema(type="string")
-     *      ),
-     *      *      @OA\Parameter(name="youtube", description="youtube", required=false,
-     *        @OA\Schema(type="string")
+     *      @OA\RequestBody(
+     *         @OA\JsonContent(
+     *            @OA\Schema(
+     *               type="object",
+     *               required={"category_id", "name", "phone", "whatsapp", "email", "facebook", "instagram", "youtube"},
+     *               @OA\Property(property="category_id", type="integer"),
+     *               @OA\Property(property="name", type="string"),
+     *               @OA\Property(property="phone", type="string"),
+     *               @OA\Property(property="whatsapp", type="string"),
+     *               @OA\Property(property="email", type="string"),
+     *               @OA\Property(property="facebook", type="string"),
+     *               @OA\Property(property="instagram", type="string"),
+     *               @OA\Property(property="youtube", type="string"),
+     *            ),
+     *         ),
+     *         @OA\MediaType(
+     *            mediaType="multipart/form-data",
+     *            @OA\Schema(
+     *               type="object",
+     *               required={"category_id", "name", "phone", "whatsapp", "email", "facebook", "instagram", "youtube"},
+     *               @OA\Property(property="category_id", type="integer"),
+     *               @OA\Property(property="name", type="string"),
+     *               @OA\Property(property="phone", type="string"),
+     *               @OA\Property(property="whatsapp", type="string"),
+     *               @OA\Property(property="email", type="string"),
+     *               @OA\Property(property="facebook", type="string"),
+     *               @OA\Property(property="instagram", type="string"),
+     *               @OA\Property(property="youtube", type="string"),
+     *            ),
+     *         ),
      *      ),
      *      @OA\Response(
      *          response=201,
@@ -119,6 +126,14 @@ class CompanyController extends Controller
      *      @OA\Response(
      *          response=403,
      *          description="Forbidden"
+     *      ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="Validation error"
+     *      ),
+     *      @OA\Response(
+     *          response=500,
+     *          description="Internal error"
      *      ),
      * )
      */
