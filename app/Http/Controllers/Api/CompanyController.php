@@ -175,6 +175,7 @@ class CompanyController extends Controller
      */
 
 
+     
     /**
      * @OA\Put(
      *      path="/companies/{uuid}",
@@ -252,6 +253,25 @@ class CompanyController extends Controller
      *
      * @param  string  $uuid
      * @return \Illuminate\Http\Response
+     */
+
+
+    /**
+     * @OA\Delete(
+     *      path="/companies/{uuid}",
+     *      tags={"Companies"},
+     *      operationId="deleteCompany",
+     *      summary="Delete company",
+     *      @OA\Parameter(
+     *          name="uuid",
+     *          in="path",
+     *          required=true
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Success"
+     *      ),
+     * ),
      */
     public function destroy($uuid)
     {
