@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class StoreUpdateCompanyRequest extends FormRequest
 {
     /**
@@ -23,7 +24,6 @@ class StoreUpdateCompanyRequest extends FormRequest
      */
     public function rules()
     {
-        $uuid = $this->company;
 
         return [
             'category_id' => ['required', 'exists:categories,id'],

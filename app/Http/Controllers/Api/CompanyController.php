@@ -18,11 +18,36 @@ class CompanyController extends Controller
         $this->repository = $company;
     }
 
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     */
+
+    /**
+     * @OA\Get(
+     *      path="/companies",
+     *      operationId="getCompaniesList",
+     *      tags={"Companies"},
+     *      summary="Get list of companies",
+     *      description="Returns list of companies",
+     *      @OA\Parameter(name="filter", in="query", description="filter", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/CompanyResource")
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     *     )
      */
     public function index(Request $request)
     {
@@ -46,9 +71,60 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+    /**
+     * @OA\Post(
+     *      path="/companies",
+     *      operationId="storeCompanies",
+     *      tags={"Companies"},
+     *      summary="Store new company",
+     *      description="Returns company data",
+     *      @OA\Parameter(name="category_id", description="category_id", required=false,
+     *        @OA\Schema(type="integer")
+     *      ),
+     *      @OA\Parameter(name="name", description="name", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      *      @OA\Parameter(name="phone", description="phone", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      *      @OA\Parameter(name="whatsapp", description="whatsapp", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      *      @OA\Parameter(name="email", description="email", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      *      @OA\Parameter(name="facebook", description="facebook", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      *      @OA\Parameter(name="instagram", description="instagram", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      *      @OA\Parameter(name="youtube", description="youtube", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      @OA\Response(
+     *          response=201,
+     *          description="Successful operation",
+     *       ),
+     *      @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      ),
+     * )
+     */
     public function store(StoreUpdateCompanyRequest $request)
     {
-        $company = $this->repository->create($request->validated());
+        $company = $this->repository->create($request->all());
         return new CompanyResource($company);
     }
 
@@ -88,8 +164,6 @@ class CompanyController extends Controller
         $company->update($request->all());
 
         return new CompanyResource($company);
-
-
     }
 
     /**
