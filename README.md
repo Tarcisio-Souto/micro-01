@@ -1,61 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h3 align="center">Microsserviço 01 - Companias e Categorias</h3>
+<br>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+<p>
+Este microsserviço foi elaborado com o intuito de ser integrado com outros microsserviços para estudo. Os serviços desta aplicação estão relacionados as classes Companies e Categories, onde um CRUD foi criado para cada um deles. A documentação foi criada via Swagger para facilitar o uso e entendimento da ferramenta, contudo fica a critério do desenvolvedor utilizar o Postman, por exemplo. Os containers da aplicação, ou seja, o laravel, mysql e o nginx foram criados através do Docker.
+<p>
 
-## About Laravel
+<br><br>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+><h3 align="center">Principais Ferramentas Utilizadas</h3>
+<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<ul>
+    <li>Laravel</li>
+    <li>Docker</li>
+</ul>
+<br>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+><h3 align="center">Requisitos</h3>
+<br>
 
-## Learning Laravel
+<p>
+<b>Para customizar/desenvolver a aplicação é necessário ter os recursos abaixo após a clonagem:</b>
+<br><br>
+<ul>
+    <li>PHP 8.0</li>
+    <li>Laravel 8</li>
+    <li>
+        <b>Editor de códigos (Visual Studio Code ou outro como o Android Studio)</b>
+        <ul><br>
+            <li>Visual Studio Code - Disponível em: https://code.visualstudio.com/download</li>
+        </ul>  
+    </li>
+    <br>
+    <li>
+        <b>Docker</b>
+        <ul><br>
+            <li>Disponível em: https://docs.docker.com/</li>
+        </ul>  
+    </li>
+    <br>
+</ul>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p><br>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+><h3 align="center">Capturas do Swagger</h3>
+<br>
 
-## Laravel Sponsors
+><b>/documentation</b><br>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/documentation.PNG)
 
-### Premium Partners
+<br><br>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+><b>/companies</b><br>
 
-## Contributing
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-list.PNG)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<br><br>
 
-## Code of Conduct
+><b>/companies-post</b><br>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-post.PNG)
 
-## Security Vulnerabilities
+<br><br>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+><b>/companies-delete</b><br>
 
-## License
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-delete.PNG)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<br><br><br>
+
+><p>TSS - Vitória/ES - 2023</p>
