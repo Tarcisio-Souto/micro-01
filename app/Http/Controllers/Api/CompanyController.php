@@ -24,6 +24,7 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+     
     /**
      * @OA\Get(
      *      path="/companies",

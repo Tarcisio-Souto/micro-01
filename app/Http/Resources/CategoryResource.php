@@ -5,6 +5,20 @@ namespace App\Http\Resources;
 use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+
+/**
+ * @OA\Schema(
+ *   description="Categories model",
+ *   title="Categories",
+ *   required={},
+ *   @OA\Property(type="string",description="title of category",title="title",property="title",example="Comércio Varejista"),
+ *   @OA\Property(type="string",description="description of category",title="description",property="description",example="Comércio de utilizadades do lar."),
+ *   @OA\Property(type="string",description="url of category",title="url",property="url",example="comercio-varejista")
+ * )
+ * 
+ */
+
+
 class CategoryResource extends JsonResource
 {
     /**
