@@ -23,8 +23,8 @@ Este microsserviço foi elaborado com o intuito de ser integrado com outros micr
 <b>Para customizar/desenvolver a aplicação é necessário ter os recursos abaixo após a clonagem:</b>
 <br><br>
 <ul>
-    <li>PHP 8.0</li>
-    <li>Laravel 8</li>
+    <li><b>PHP 8.0</b></li>
+    <li><b>Laravel 8</b></li>
     <li>
         <b>Editor de códigos (Visual Studio Code ou outro como o Android Studio)</b>
         <ul><br>
@@ -43,30 +43,30 @@ Este microsserviço foi elaborado com o intuito de ser integrado com outros micr
 
 <p><br>
 
-><h3 align="center">Capturas do Swagger</h3>
+><h3 align="center">Algumas Capturas do Swagger</h3>
 <br>
 
 ><b>/documentation</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/documentation.PNG)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/documentation.png)
 
 <br><br>
 
 ><b>/companies</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-list.PNG)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-list.png)
 
 <br><br>
 
 ><b>/companies-post</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-post.PNG)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-post.png)
 
 <br><br>
 
 ><b>/companies-delete</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-delete.PNG)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/companies-delete.png)
 
 <br><br><br>
 
